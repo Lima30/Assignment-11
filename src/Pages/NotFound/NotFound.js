@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import notfound from '../../images/404.png'
+
 const NotFound = () => {
     return (
         <div>
-            <img style={{ width: '100%' }} src={notfound} alt="" />
-            <Link to="/"><button>Go Back</button>
-            </Link>
+            <h2>404</h2>
+            <h2>Page Not Found</h2>
+            <p>Please Try Again Later.</p>
         </div>
     );
 };

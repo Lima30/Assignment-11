@@ -3,7 +3,7 @@ import Footer from '../../Footer/Footer';
 import Founder from '../../Founder/Founder';
 import Banner from '../Banner/Banner';
 import Distance from '../Distance/Distance';
-import Experts from '../Experts/Experts';
+
 import Services from '../Services/Services';
 
 const Home = () => {

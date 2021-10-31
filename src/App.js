@@ -12,7 +12,7 @@ import MyOrder from './Pages/My Order/MyOrder';
 import manageOrder from './Pages/manageOrder/manageOrder';
 import Contact from './Pages/Contact/Contact';
 import Footer from './Pages/Footer/Footer';
-import Expert from './Pages/Home/Expert/Expert';
+// import Expert from './Pages/Home/Expert/Expert';
 import Aminities from './Pages/Amenities/Aminities';
 
 
