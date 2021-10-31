@@ -1,23 +1,36 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+
 import useAuth from '../../hooks/useAuth';
 import './Order.css';
 
 const PlaceOrder = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { user } = useAuth;
+    const { user } = useAuth();
     const onSubmit = data => {
-        console.log(data)
+        // console.log(data)
+
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
     };
     return (
         <div>
             <h2>Please Add Details to Book Your Room</h2>
             <form className="placeorder-form" onSubmit={handleSubmit(onSubmit)}>
 
-                <input placeholder="Full Name" defaultValue="" {...register("name")} />
+                <input placeholder="Full Name" defaultValue={user.displayName} {...register("name")} />
                 <br />
                 <br />
-                <input placeholder="Email Address" {...register("email", { required: true })} />
+                <input placeholder="Email Address" defaultValue={user.email} {...register("email", { required: true })} />
 
                 {errors.email && <span className="bg-danger text-white">This field is required</span>}
                 <br />
