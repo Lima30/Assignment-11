@@ -8,6 +8,8 @@ import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import AddService from './Pages/AddService/AddService';
+import MyOrder from './Pages/My Order/MyOrder';
+import manageOrder from './Pages/manageOrder/manageOrder';
 
 
 function App() {
@@ -31,7 +33,15 @@ function App() {
             </PrivateRoute>
             <Route path="/addServices">
               <AddService></AddService>
-            </Route>>
+            </Route>
+            <PrivateRoute path="/myorder">
+              <MyOrder></MyOrder>
+            </PrivateRoute>
+
+            <PrivateRoute path="/manageOrder">
+              <manageOrder></manageOrder>
+            </PrivateRoute>
+
             <Route path="*">
               <NotFound></NotFound>
             </Route>
