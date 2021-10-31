@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router';
 
 import useAuth from '../../hooks/useAuth';
 import './Order.css';
@@ -7,6 +8,8 @@ import './Order.css';
 const PlaceOrder = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { user } = useAuth();
+    const { serviceId } = useParams();
+    const [service, setService] = useState({})
     const onSubmit = data => {
         // console.log(data)
 

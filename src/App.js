@@ -10,6 +10,10 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import AddService from './Pages/AddService/AddService';
 import MyOrder from './Pages/My Order/MyOrder';
 import manageOrder from './Pages/manageOrder/manageOrder';
+import Contact from './Pages/Contact/Contact';
+import Footer from './Pages/Footer/Footer';
+import Expert from './Pages/Home/Expert/Expert';
+import Aminities from './Pages/Amenities/Aminities';
 
 
 function App() {
@@ -28,13 +32,19 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/amenities">
+              <Aminities></Aminities>
+            </Route>
 
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
-            <Route path="/addServices">
+            <PrivateRoute path="/addServices">
               <AddService></AddService>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/myorder">
               <MyOrder></MyOrder>
             </PrivateRoute>
@@ -49,6 +59,10 @@ function App() {
           </Switch>
         </Router>
       </AuthProvider>
+      <div>
+        <Footer></Footer>
+      </div>
+
     </div>
   );
 }

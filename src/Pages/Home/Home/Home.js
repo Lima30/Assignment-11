@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from '../../Footer/Footer';
+import Founder from '../../Founder/Founder';
 import Banner from '../Banner/Banner';
 import Distance from '../Distance/Distance';
 import Experts from '../Experts/Experts';
@@ -15,6 +17,11 @@ const Home = () => {
             <br />
             <br />
             <Distance></Distance>
+            <br />
+            <br />
+            <Founder></Founder>
+            <br />
+            <br />
 
         </div>
     );

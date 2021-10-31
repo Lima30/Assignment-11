@@ -18,12 +18,16 @@ const Booking = () => {
     return (
         <div>
             <h2>Details of: {service.Roomname}</h2>
+            <h2>Price: ${service.Price}</h2>
+            <img src={service.picture} alt="" />
 
-            <h2>this is booking: {serviceId}</h2>
+            {/* <h2>this is booking: {serviceId}</h2> */}
+            <br />
+
 
             <br />
             <br />
-            <Distance></Distance>
+
             <br />
             <PlaceOrder></PlaceOrder>
         </div>
