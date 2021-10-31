@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 Website Name: Dream Hotel
 This is the top ranking 5 star hotel in key-west, FL. This hotel has an amaizing oceam view. 
-This project was bootstrapped with [Create React App](https://hotel-room-8049e.web.app/).
+Live Link: (https://hotel-room-8049e.web.app/).
 
 Some Points why you use my website:
 •	Easy access for everybody.
